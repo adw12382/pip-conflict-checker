@@ -226,7 +226,7 @@ class Checker(object):
         """
         Returns a dict of project_name => version installed
         """
-        distributions = pip.get_installed_distributions()
+        distributions = [d for d in working_set]
         dist_versions = {}
 
         # Build the installed versions dict
